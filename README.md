@@ -1,3 +1,3 @@
 # ansible_version_control
 
-This is a test to confirm that we can edit and commit to our repo.
+This is a repository for version control within our ansible environment. I will be using this repo to maintain scripts, configurations, and inventory files.
