@@ -1,3 +1,6 @@
-192.168.0.132
-192.168.0.51
-192.168.0.220
+[servers]
+192.168.0.132 ansible_user=server1user	
+192.168.0.51 ansible_user=server2user
+192.168.0.220 ansible_user=server3user
+
+
