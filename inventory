@@ -1,6 +1,6 @@
 [servers]
-192.168.0.132 ansible_user=server1user	
-192.168.0.51 ansible_user=server2user
-192.168.0.220 ansible_user=server3user
+192.168.0.132 ansible_user=server1user apache_package=apache2 php_package=libapache2-mod-php	
+192.168.0.51 ansible_user=server2user apache_package=apache2 php_package=libapache2-mod-php
+192.168.0.220 ansible_user=server3user apache_package=apache2 php_package=libapache2-mod-php
 
 
