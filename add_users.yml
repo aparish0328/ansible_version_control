@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Create extrauser user
+    tags: always
+    user:
+      name: extrauser
