@@ -11,3 +11,6 @@
 
 [file_servers]
 192.168.0.220 ansible_user=server3user
+
+[workstations]
+192.168.0.51 ansible_user=server2user
