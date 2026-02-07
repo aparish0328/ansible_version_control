@@ -1,9 +1,22 @@
 pipeline {
-  agent {label 'linux'}
+  agent any
   
   stages {
-    stage('Test') {
+    stage('SSH to Remote Machine') {
       steps {
+        sshagent(['ansible-ssh-key']) {
+                    sh '''
+                        ssh -o StrictHostKeyChecking=no ansible@ansible.lan "echo 'Connected successfully'"
+                    '''
+                }
+            }
+        }
+        stage('SCP File') {
+            steps {
+                sshagent(['ansible-ssh-key']) {
+                    sh '''
+                        scp -o StrictHostKeyChecking=no file.txt ansible@ansible.lan:/path/
+                    '''
         sh '''
           ansible --version 
           ansible-playbook --version
