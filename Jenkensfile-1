@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sshagent(['ansible-ssh-key']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no sysadmin@ansible.lan "echo 'Connected successfully'"
+                        ssh -o StrictHostKeyChecking=no sysadmin@192.168.3.9 "echo 'Connected successfully'"
                     '''
                 }
             }
